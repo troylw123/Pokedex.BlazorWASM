@@ -70,6 +70,7 @@ else
         var result = JsonConvert.DeserializeObject<Pokemon>(await httpClient.GetStringAsync($"https://pokeapi.co/api/v2/pokemon/{name}"));
 
         if (result.Name.Length == 0)
+        
         {
             return null;
         }
